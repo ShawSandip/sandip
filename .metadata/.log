@@ -535,3 +535,49 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-04-18 15:30:20.776
+!MESSAGE Stash create error
+!STACK 1
+org.eclipse.team.core.TeamException: Exception caught during execution of reset command. Could not rename file C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\._0.log349346439723133336.tmp to C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\0.log
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2382)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2407)
+	at org.eclipse.egit.core.op.StashCreateOperation.execute(StashCreateOperation.java:108)
+	at org.eclipse.egit.ui.internal.stash.StashCreateUI$1.runInWorkspace(StashCreateUI.java:82)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\._0.log349346439723133336.tmp to C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1564)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:569)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:471)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:414)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:182)
+	at org.eclipse.jgit.api.StashCreateCommand.call(StashCreateCommand.java:374)
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:97)
+	... 6 more
+Caused by: java.io.IOException: Could not rename file C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\._0.log349346439723133336.tmp to C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\0.log
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:324)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1562)
+	... 12 more
+!SUBENTRY 1 org.eclipse.team.core 4 0 2024-04-18 15:30:20.776
+!MESSAGE Exception caught during execution of reset command. Could not rename file C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\._0.log349346439723133336.tmp to C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\0.log
+!STACK 0
+java.io.IOException: Could not rename file C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\._0.log349346439723133336.tmp to C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1564)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:569)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:471)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:414)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:182)
+	at org.eclipse.jgit.api.StashCreateCommand.call(StashCreateCommand.java:374)
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2382)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2407)
+	at org.eclipse.egit.core.op.StashCreateOperation.execute(StashCreateOperation.java:108)
+	at org.eclipse.egit.ui.internal.stash.StashCreateUI$1.runInWorkspace(StashCreateUI.java:82)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\._0.log349346439723133336.tmp to C:\Users\LENOVO\eclipse-workspace2\.metadata\.plugins\org.eclipse.m2e.logback\0.log
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:324)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1562)
+	... 12 more
