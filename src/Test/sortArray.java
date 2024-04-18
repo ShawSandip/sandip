@@ -17,6 +17,7 @@ public class sortArray {
 		List<Integer> ls=Arrays.asList(n);
 		Collections.sort(ls);
 		System.out.println(ls.get(1));
+		System.out.println("test");
 		
 	}
 
