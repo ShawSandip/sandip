@@ -18,7 +18,12 @@ public class sortArray {
 		Collections.sort(ls);
 		System.out.println(ls.get(1));
 		System.out.println("test");
-		
+		System.out.println("test");
+		System.out.println("test");
+		System.out.println("test");
+		System.out.println("test");
+
+
 	}
 
 }
